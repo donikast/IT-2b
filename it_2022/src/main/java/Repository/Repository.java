@@ -9,6 +9,7 @@ public class Repository {
 	
 	private static Repository instance = null;
 	private static Set<User> collection;
+	static int index=1;
 	
 	private Repository() {}
 	
@@ -20,8 +21,22 @@ public class Repository {
 		return instance;
 	}
 	
-	public boolean addUser(User user) {
-		return collection.add(user);
+	public void addUser(User user) {
+		user.setId(index++);
+		collection.add(user);
+	}
+	
+	public boolean ifExist(User user) {
+		return collection.contains(user);
+	}
+	
+	public User getUserByUsername(String username) {
+		for(User u:collection) {
+			if(u.getUsername().equals(username)) {
+				return u;
+			}
+		}
+		return null;
 	}
 
 }

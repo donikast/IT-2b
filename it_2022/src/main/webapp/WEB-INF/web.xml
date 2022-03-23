@@ -10,4 +10,10 @@
   	<description></description>
   	<servlet-class>controllers.RegistrationServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>LoginServlet</servlet-name>
+  	<display-name>LoginServlet</display-name>
+  	<description></description>
+  	<servlet-class>controllers.LoginServlet</servlet-class>
+  </servlet>
 </web-app>
