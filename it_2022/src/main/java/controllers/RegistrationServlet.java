@@ -64,10 +64,9 @@ public class RegistrationServlet extends HttpServlet {
 				user.setProfessionalSkills(profSkills);
 				
 				List<Skill> personalSkills = new ArrayList<Skill>();
-				profSkills.add(new Skill());
-				profSkills.add(new Skill());
-				profSkills.add(new Skill());
-				profSkills.add(new Skill());
+				personalSkills.add(new Skill());
+				personalSkills.add(new Skill());
+				personalSkills.add(new Skill());
 				user.setPersonalSkills(personalSkills);
 				
 				collection.addUser(user);

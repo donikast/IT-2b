@@ -6,7 +6,7 @@ public class Skill {
 	
 	public Skill() {
 		skillName="Умение";
-		skillValue=20;
+		skillValue=30;
 	}
 	
 	public String getSkillName() {
