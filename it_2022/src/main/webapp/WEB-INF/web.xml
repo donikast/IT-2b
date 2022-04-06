@@ -16,4 +16,10 @@
   	<description></description>
   	<servlet-class>controllers.LoginServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>UserServlet</servlet-name>
+  	<display-name>UserServlet</display-name>
+  	<description></description>
+  	<servlet-class>controllers.UserServlet</servlet-class>
+  </servlet>
 </web-app>
