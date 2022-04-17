@@ -12,6 +12,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import models.User;
 
 @WebServlet("/login")
@@ -26,8 +27,17 @@ public class LoginServlet extends HttpServlet {
 
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false);
+		
+		User loggedUser = (session!=null)?(User)session.getAttribute("loggedUser"):null;
+		if(loggedUser!=null) {
+			response.sendRedirect("user?id="+loggedUser.getId());
+		}
+		else {
 		RequestDispatcher rd = request.getRequestDispatcher("/LoginPage.jsp");
 		rd.forward(request, response);
+		}
 	}
 
  
@@ -42,9 +52,15 @@ public class LoginServlet extends HttpServlet {
 			
 			User loggedUser = collection.getUserByUsername(username);
 			
-			response.sendRedirect("user?id="+loggedUser.getId()+"&action=edit");
+			HttpSession oldSession = request.getSession(false);
+			if(oldSession!=null) {
+				oldSession.invalidate();
+			}
 			
+			HttpSession newSession = request.getSession();
+			newSession.setAttribute("loggedUser", loggedUser);
 			
+			response.sendRedirect("user?id="+loggedUser.getId()+"&action=edit");	
 		}
 		
 		else {

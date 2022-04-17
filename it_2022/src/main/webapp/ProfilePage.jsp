@@ -26,6 +26,7 @@
 			</div>
 			<div class="profile-info-container">
 				<h2>Профилна информация</h2>
+				<a href="user?id=<%=user.getId() %>&action=edit">Редактирай</a>
 				<p>Име: <%= user.getPersonalName() %></p>
 				<p>Професия: <%= user.getJobTitle() %></p>
 				<p>Описание: <%= user.getDescription() %></p>

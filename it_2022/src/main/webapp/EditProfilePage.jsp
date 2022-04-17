@@ -14,13 +14,9 @@
 
 <jsp:getProperty property="personalName" name="loggedUser"/>-->
 
-
-	<%
-	User user = (User) request.getAttribute("loggedUser");
-	%>
+	<%	User user = (User) session.getAttribute("loggedUser");	%>
 
 	<jsp:include page="shared/header.jsp"></jsp:include>
-
 	<div class="content">
 		<form action="user" method="post">
 		
@@ -41,18 +37,14 @@
 					<p>Описание:</p>
 					<input type="text" name="description"
 						value="<%=user.getDescription()%>" />
-
-
 				</div>
 			</div>
 			<h2>Умения</h2>
 
 			<div class="skills-container">
 				<div class="skills-container-element">
-					<%
-					int i = 0;
-					for (Skill skill : user.getProfessionalSkills()) {
-					%>
+					<% int i = 0;
+					for (Skill skill : user.getProfessionalSkills()) {	%>
 					<div>
 						<input type="text" name="prof-skill-name<%=i%>"
 							value="<%=skill.getSkillName()%>" />
@@ -61,17 +53,12 @@
 						min="0" max="100" step="10"
 							value="<%=skill.getSkillValue()%>" />
 					</div>
-					<%
-					i++;
-					}
-					%>
+					<%	i++;}%>
 				</div>
 
 				<div class="skills-container-element">
-					<%
-					int j = 0;
-					for (Skill skill : user.getPersonalSkills()) {
-					%>
+					<%	int j = 0;
+					for (Skill skill : user.getPersonalSkills()) {	%>
 
 					<div>
 						<input type="text" name="personal-skill-name<%=j%>"
@@ -80,10 +67,7 @@
 						min="0" max="100" step="10"
 							value="<%=skill.getSkillValue()%>" />
 					</div>
-					<%
-					j++;
-					}
-					%>
+					<%j++;}%>
 				</div>
 			</div>
 			<h2>Контакти</h2>
@@ -93,22 +77,17 @@
 					<div>
 						<label>E-mail</label> <input type="text" name="email"
 							value="<%=user.getEmail()%>" />
-
 					</div>
-
 					<div>
 						<label>Град</label> <input type="text" name="city"
 							value="<%=user.getAddress().getCity()%>" />
-
 					</div>
-
 				</div>
 
 				<div class="skills-container-element">
 					<div>
 						<label>Телефон</label> <input type="text" name="phone"
 							value="<%=user.getPhone()%>" />
-
 					</div>
 
 					<div>
