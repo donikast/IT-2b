@@ -28,16 +28,8 @@ public class LoginServlet extends HttpServlet {
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession(false);
-		
-		User loggedUser = (session!=null)?(User)session.getAttribute("loggedUser"):null;
-		if(loggedUser!=null) {
-			response.sendRedirect("user?id="+loggedUser.getId());
-		}
-		else {
 		RequestDispatcher rd = request.getRequestDispatcher("/LoginPage.jsp");
 		rd.forward(request, response);
-		}
 	}
 
  

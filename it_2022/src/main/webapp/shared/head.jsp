@@ -4,4 +4,5 @@
 <meta charset="UTF-8">
 <title>User app</title>
 <link rel="stylesheet" href="css/styles.css">
+<script type="text/javascript" src="js/main.js"></script>
 </head>
