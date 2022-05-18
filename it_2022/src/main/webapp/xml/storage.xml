@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <user>
+        <id>1</id>
+        <personalName>Donika</personalName>
+        <username>1</username>
+        <password>1</password>
+        <jobTitle>Не е зададено</jobTitle>
+        <description>Не е зададено</description>
+        <email>Не е зададен</email>
+        <phone>Не е зададен</phone>
+        <address>
+            <city>Не е зададен</city>
+            <street>Не е зададен</street>
+        </address>
+        <professional-skills>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+        </professional-skills>
+        <personal-skills>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+        </personal-skills>
+    </user>
+    <user>
+        <id>2</id>
+        <personalName>Станислава</personalName>
+        <username>wer</username>
+        <password>w</password>
+        <jobTitle>Не е зададено</jobTitle>
+        <description>Не е зададено</description>
+        <email>Не е зададен</email>
+        <phone>Не е зададен</phone>
+        <address>
+            <city>Не е зададен</city>
+            <street>Не е зададен</street>
+        </address>
+        <professional-skills>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+        </professional-skills>
+        <personal-skills>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+            <skill>
+                <skillName>Умение</skillName>
+                <skillValue>30</skillValue>
+            </skill>
+        </personal-skills>
+    </user>
+</users>

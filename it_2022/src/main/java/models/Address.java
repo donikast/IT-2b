@@ -1,6 +1,13 @@
 package models;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="address")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Address {
+	//@XmlElement(name="town")
 	private String city;
 	private String street;
 	
